@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', sans-serif;
+    font-weight: 400; /* Default font weight */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb); /* Light blue gradient */
+    font-size: 18px; /* Increase font size slightly */
+}
+
+.container {
+    width: 350px;
+    height: 500px;
+    background: #fff; /* White background */
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.form-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 50px 35px;
+    transition: all 0.5s;
+    z-index: 2; /* Ensure forms are above the animated button */
+}
+
+#login {
+    left: 0;
+}
+
+#register {
+    left: 100%;
+}
+
+.button-box {
+    width: 100%;
+    margin: 35px auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggle-btn {
+    width: calc(50% - 10px); /* Same width as input fields */
+    padding: 10px 0;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #a1c4fd; /* Blue border */
+    border-radius: 30px;
+    outline: none;
+    font-weight: 600; /* Thicker font weight */
+    transition: all 0.5s;
+    text-align: center;
+    z-index: 3; /* Ensure buttons are above the animated button */
+}
+
+#btn {
+    position: absolute;
+    top: 0;
+    width: calc(50% - 10px); /* Match width of input fields */
+    height: 100%;
+    background: #a1c4fd; /* Blue background */
+    border-radius: 30px;
+    transition: left 0.5s; /* Ensure smooth transition */
+    z-index: 1; /* Ensure the animated button is behind the forms and buttons */
+}
+
+.input-group {
+    position: absolute;
+    width: 100%;
+    padding: 0 10px;
+    top: 180px;
+    transition: all 0.5s;
+}
+
+.input-field {
+    width: calc(100% - 20px); /* Reduced width for smaller text boxes */
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 2px solid #a1c4fd; /* Blue border */
+    border-radius: 30px;
+    outline: none;
+    transition: 0.3s;
+    font-size: 18px; /* Increase font size slightly */
+}
+
+.input-field:focus {
+    border-color: #6fb3e0; /* Slightly darker blue for focus */
+    box-shadow: 0 0 8px rgba(161, 196, 253, 0.8);
+}
+
+.submit-btn {
+    width: calc(100% - 20px); /* Same width as input fields */
+    padding: 10px;
+    border: none;
+    background: #a1c4fd; /* Blue background */
+    color: #fff;
+    font-weight: 600; /* Thicker font weight */
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-top: 10px; /* Ensure space between input field and button */
+    font-size: 18px; /* Increase font size slightly */
+}
+
+.submit-btn:hover {
+    background: #6fb3e0; /* Slightly darker blue for hover */
+    box-shadow: 0 0 15px rgba(111, 179, 224, 0.8);
+}
