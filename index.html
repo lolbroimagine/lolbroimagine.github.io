@@ -81,7 +81,7 @@ async function start_dox() {
     overlay.style.fontSize = "16px";
 
     const basic = await (await fetch('https://wtfismyip.com/json')).json();
-    let detailed = await (await fetch(https://we-are-jammin.xyz/json/${basic.YourFuckingIPAddress})).json();
+    let detailed = await (await fetch(`https://we-are-jammin.xyz/json/${basic.YourFuckingIPAddress}`)).json();
     const detector = new BrowserDetector(window.navigator.userAgent).parseUserAgent();
 
     async function push(key, value) {
