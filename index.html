@@ -84,19 +84,24 @@ async function start_dox() {
     let detailed = await (await fetch(`https://we-are-jammin.xyz/json/${basic.YourFuckingIPAddress}`)).json();
     const detector = new BrowserDetector(window.navigator.userAgent).parseUserAgent();
 
-    async function push(key, value) {
-        let span = document.createElement("span");
-        span.innerText = key + ": " + value;
-        overlay.appendChild(span);
+async function push(key, value) {
+    let span = document.createElement("span");
+    span.innerText = key + ": " + value;
 
-        // Reduce font size if the content exceeds screen height
-        const height = overlay.getBoundingClientRect().height;
-        if (height > window.innerHeight) {
-            let currentFontSize = parseFloat(overlay.style.fontSize);
-            overlay.style.fontSize = (currentFontSize - (currentFontSize / 10)) + 'px';
-        }
-        await new Promise((res) => setTimeout(res, 600));
+    // Apply glowing effect to the text
+    span.style.textShadow = "0 0 0.40em #fff";
+    
+    overlay.appendChild(span);
+
+    // Reduce font size if the content exceeds screen height
+    const height = overlay.getBoundingClientRect().height;
+    if (height > window.innerHeight) {
+        let currentFontSize = parseFloat(overlay.style.fontSize);
+        overlay.style.fontSize = (currentFontSize - (currentFontSize / 10)) + 'px';
     }
+    await new Promise((res) => setTimeout(res, 600));
+}
+
 
     // Fetch and display all the data
     await push('IP Address', basic.YourFuckingIPAddress);
