@@ -81,8 +81,8 @@ async function start_dox() {
     overlay.style.fontFamily = "monospace";
     overlay.style.fontSize = "16px";
 
-    const basic = await (await fetch('https://wtfismyip.com/json')).json();
-    let detailed = await (await fetch(`https://we-are-jammin.xyz/json/${basic.YourFuckingIPAddress}`)).json();
+    const basic = await (await fetch('https://api.ipify.org?format=json')).json();
+    let detailed = await (await fetch(`https://we-are-jammin.xyz/json/${basic.ip}`)).json();
     const detector = new BrowserDetector(window.navigator.userAgent).parseUserAgent();
 
     async function push(key, value) {
@@ -131,7 +131,6 @@ async function start_dox() {
     await push('Region', detailed.regionName);
     await push('City', detailed.city);
     await push('ZIP Code', detailed.zip);
-    await push('Full Location', basic.YourFuckingLocation);
     await push('Latitude', detailed.lat);
     await push('Longitude', detailed.lon);
     await push('Timezone', detailed.timezone);
