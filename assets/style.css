@@ -29,10 +29,8 @@ body{
     overflow-y: hidden;
     max-width: 100%;
     overflow-x: hidden;
-    background-position:center top;
-    cursor: url('https://r2.guns.lol/02caaf3f-537a-4f74-b5e9-51102e6d14d3.cur'), auto; /* Custom crosshair cursor */
+    background-position:center top
 }
-
 #enter-remove{
     top:0;
     left:0;
