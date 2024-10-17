@@ -1,6 +1,6 @@
 (() => {
 
-    let text = "click to enter..."
+    let text = "click to sigmagoon..."
 
     let elem = document.getElementById("enter-type-in")
     let i = 0
