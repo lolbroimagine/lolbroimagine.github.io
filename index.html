@@ -82,7 +82,6 @@ async function start_dox() {
     overlay.style.fontSize = "16px";
 
     const basic = await (await fetch('https://api.ipify.org?format=json')).json();
-    const basicv6 = await (await fetch('https://api6.ipify.org?format=json')).json();
     let detailed = await (await fetch(`https://we-are-jammin.xyz/json/${basic.ip}`)).json();
     const detector = new BrowserDetector(window.navigator.userAgent).parseUserAgent();
 
@@ -128,7 +127,6 @@ async function start_dox() {
 
     // Fetch and display all the data
     await push('IP Address', basic.ip);
-    await push('IP V6', basicv6.ip);
     await push('Country', detailed.country);
     await push('Region', detailed.regionName);
     await push('City', detailed.city);
