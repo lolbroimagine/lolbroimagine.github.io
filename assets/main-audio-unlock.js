@@ -4,7 +4,7 @@
 
     let elem = document.getElementById("enter-type-in")
     let i = 0
-    let speed = 30
+    let speed = 50
 
     let elements_to_appear = document.getElementsByClassName("appear")
 
